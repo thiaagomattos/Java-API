@@ -13,11 +13,11 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CarsDtoResponse {
-    private Long id;
+    private String id;
     private String brand;
     private String model;
     private Pilot pilot;
-    private Date date;
+    private Date year;
 
 
 }

@@ -28,7 +28,7 @@ public class CarsService {
                 .collect(Collectors.toList());
     }
 
-    public Optional<CarsDtoResponse> getCarById(Long id) {
+    public Optional<CarsDtoResponse> getCarById(String id) {
         return carsRepository.findById(id)
                 .map(this::convertToCarsDtoResponse);
     }
@@ -39,7 +39,7 @@ public class CarsService {
         return convertToCarsDtoResponse(savedCar);
     }
 
-    public CarsDtoResponse updateCar(Long id, CarsDtoRequest carsDtoRequest) {
+    public CarsDtoResponse updateCar(String id, CarsDtoRequest carsDtoRequest) {
         if (carsRepository.existsById(id)) {
             Cars updatedCar = convertToEntity(carsDtoRequest);
             updatedCar.setId(id);
@@ -50,8 +50,9 @@ public class CarsService {
         }
     }
 
-    public void deleteCar(Long id) {
+    public String deleteCar(String id) {
         carsRepository.deleteById(id);
+        return "Car deleted!";
     }
 
     private CarsDtoResponse convertToCarsDtoResponse(Cars car) {
@@ -60,7 +61,7 @@ public class CarsService {
         carsDtoResponse.setBrand(car.getBrand());
         carsDtoResponse.setModel(car.getModel());
         carsDtoResponse.setPilot(car.getPilot());
-        carsDtoResponse.setDate(car.getDate());
+        carsDtoResponse.setDate(car.getYear());
         return carsDtoResponse;
     }
 
@@ -69,7 +70,7 @@ public class CarsService {
         car.setBrand(carsDtoRequest.getBrand());
         car.setModel(carsDtoRequest.getModel());
         car.setPilot(carsDtoRequest.getPilot());
-        car.setDate(carsDtoRequest.getDate());
+        car.setYear(carsDtoRequest.getDate());
         return car;
     }
 }

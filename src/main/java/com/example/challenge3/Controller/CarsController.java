@@ -10,7 +10,7 @@ import com.example.challenge3.Service.CarsService;
 
 
 @RestController
-@RequestMapping("/cars")
+@RequestMapping("/ms-cars")
 public class CarsController {
 
     private final CarsService carsService;
@@ -31,17 +31,17 @@ public class CarsController {
     }
 
     @GetMapping("/{id}")
-    public Optional<CarsDtoResponse> getCarById(@PathVariable Long id) {
+    public Optional<CarsDtoResponse> getCarById(@PathVariable String id) {
         return carsService.getCarById(id);
     }
 
     @PutMapping("/{id}")
-    public CarsDtoResponse updateCar(@PathVariable Long id, @RequestBody CarsDtoRequest carsDtoRequest) {
+    public CarsDtoResponse updateCar(@PathVariable String id, @RequestBody CarsDtoRequest carsDtoRequest) {
         return carsService.updateCar(id, carsDtoRequest);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteCar(@PathVariable Long id) {
+    public void deleteCar(@PathVariable String id) {
         carsService.deleteCar(id);
     }
 }

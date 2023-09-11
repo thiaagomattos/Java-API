@@ -16,7 +16,7 @@ public class CarsDtoRequest {
     private String brand;
     private String model;
     private Pilot pilot;
-    private Date date;
+    private Date year;
 
 
 }
