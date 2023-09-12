@@ -11,13 +11,14 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class Cars {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
     private String brand;
     private String model;
     private Pilot pilot;
-    private Date date;
+    private Date year;
+
 }

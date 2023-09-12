@@ -1,12 +1,4 @@
-  spring:
-    data:
+spring:
+  data:
     mongodb:
-      authentication-database: admin
-      username: root
-      password: root
-      database: db_ms-cars
-      port: 27017
-      host: localhost
-      driver: com.mongodb.MongoClient
-    profiles:
-        active: dev
+      uri: mongodb://localhost:27017/db_ms-cars
