@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "02ca589a-e765-431f-b179-11405965e1e9",
+		"name": "Cars_3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28448017"
+	},
+	"item": [
+		{
+			"name": "POST_CAR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\": \"bmw\",\r\n    \"model\": \"x1\",\r\n    \"pilot\":\r\n        {\r\n            \"name\":\"pedro\",\r\n            \"age\": 21\r\n        }\r\n    ,\r\n    \"year\": \"2022-03-03\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/ms-cars/"
+			},
+			"response": []
+		},
+		{
+			"name": "GET_CARS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/ms-cars/"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT_CAR",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\": \"Fiat\",\r\n    \"model\": \"Fastack\",\r\n    \"pilot\":\r\n        {\r\n            \"name\":\"Lucas Carlos\",\r\n            \"age\": 21\r\n        }\r\n    ,\r\n    \"date\": \"2012-02-02\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/ms-cars/"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_CAR",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\": \"Fiat\",\r\n    \"model\": \"Fastback\",\r\n    \"pilot\":\r\n        {\r\n            \"name\":\"Lucas Carlos\",\r\n            \"age\": 21\r\n        }\r\n    ,\r\n    \"date\": \"2012-02-02\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/ms-cars/"
+			},
+			"response": []
+		}
+	]
+}
